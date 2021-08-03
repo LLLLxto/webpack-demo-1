@@ -8,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'
   },
+  devServer: {
+    contentBase: './dist'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'My App',
@@ -15,11 +18,11 @@ module.exports = {
     })
   ],
   module: {
-      rules:[
-          {
-              test:/\.css$/i,
-              use:["style-loader", "css-loader"]
-          }
-      ]
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   }
 }
