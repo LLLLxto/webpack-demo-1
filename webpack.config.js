@@ -1,27 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
+const base = require('./webpack.config.base.js')
+
 module.exports = {
+  ...base, //把 base 所有属性抄过来
   mode: 'development',
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js'
-  },
-  devServer: {
-    contentBase: './dist'
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'My App',
-      template: 'src/assets/test.html'
-    })
-  ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"]
       }
     ]
   }
