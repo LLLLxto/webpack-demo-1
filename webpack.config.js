@@ -4,7 +4,7 @@ const path = require('path')
 const base = require('./webpack.config.base.js')
 
 module.exports = {
-  ...base, //把 base 所有属性抄过来
+  ...base,
   mode: 'development',
   module: {
     rules: [
