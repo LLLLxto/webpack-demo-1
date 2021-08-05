@@ -1,12 +1,12 @@
 import x from './x.js'
 console.log(x)
 
-import jpg from './assets/1.jpg'
-console.log(jpg)
+// import jpg from './assets/1.jpg'
+// console.log(jpg)
 const div = document.getElementById('app')
-div.innerHTML = `
-    <img src="${jpg}">
-`
+// div.innerHTML = `
+//     <img src="${jpg}">
+// `
 
 
 const button = document.createElement('button')
